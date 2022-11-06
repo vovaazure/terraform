@@ -30,6 +30,13 @@ terraform {
       version = "~> 3.0"
      }
   }
+  #Terraform St Storage to AzureRM storage container
+  backend "azurerm" {
+    resource_group_name = "terraform-storage-rg"
+    storage_account_name = "terraformstoragebazeyan"
+    container_name = "tfstatefiles"
+    key = "terraform.tfstate"
+  }
 
 }
 # 2. Terraform Provider Block for AzureRM

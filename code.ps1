@@ -33,3 +33,4 @@ terraform destroy -target=azurerm_resource_group.aks-rg2 #destroy specific resou
 terraform plan -var "location=East US"
 export TF_VAR_location="westus"
 [Environment]::SetEnvironmentVariable("TF_VAR_location","westus")
+[Environment]::SetEnvironmentVariable("TF_VAR_location",$null)
